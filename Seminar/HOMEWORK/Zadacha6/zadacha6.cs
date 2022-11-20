@@ -2,3 +2,17 @@
 // 4 -> да
 // -3 -> нет
 // 7 -> нет
+
+Console.Write("Введите число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+
+int i = num1 % 2;
+
+if (i == 0)
+{
+    Console.Write($"Число {num1} - ЧЁТНОЕ!!!");
+}
+else
+{
+    Console.Write($"Число {num1} - НЕЧЁТНОЕ!!!");
+}
