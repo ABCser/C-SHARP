@@ -36,7 +36,7 @@ namespace StopwatchExample
                 }
             }
             stopwatch.Stop();
-            Console.WriteLine($"Время выполнения программы: {stopwatch.ElapsedMilliseconds} милисекунд.");
+            Console.WriteLine($"Время выполнения программы: {stopwatch.ElapsedMilliseconds} миллисекунд.");
         }
     }
 }
