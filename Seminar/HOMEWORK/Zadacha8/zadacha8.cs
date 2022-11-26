@@ -2,6 +2,8 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
+//for (int i = 0; i<=num;i=i+2) Console.Write($"{i} ");
+
 Console.Write("Введите первое число: ");
 int N = Convert.ToInt32(Console.ReadLine());
 

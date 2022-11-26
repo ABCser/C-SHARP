@@ -9,15 +9,8 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-if (num1 > num2)
-{
-    Console.WriteLine($"MAX = {num1}, MIN = {num2} ");
-}
-if (num1 == num2)
-{
-    Console.WriteLine("Числа равны!");
-}
-if (num1 < num2)
-{
-    Console.WriteLine($"MAX = {num2}, MIN = {num1} ");
-}
+if (num1 > num2) Console.WriteLine($"MAX = {num1}, MIN = {num2} ");
+
+else if (num1 < num2) Console.WriteLine($"MAX = {num2}, MIN = {num1} ");
+
+else Console.WriteLine("Числа равны!");
