@@ -18,7 +18,7 @@ void Chislo(int num)
 {
     int res = Math.Abs(num % 100 / 10);
     if (num < 1000 && num > 99) Console.WriteLine($"Вторая цифра введенного числа = {res}.");
-    if (num > -1000 && num < -99) Console.WriteLine($"Вторая цифра введенного числа = {res}.");
+    else if (num > -1000 && num < -99) Console.WriteLine($"Вторая цифра введенного числа = {res}.");
     else Console.WriteLine($"Ошибка! Введите трехзначное число!!!");
 }
 
