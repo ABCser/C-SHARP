@@ -24,8 +24,6 @@ try
 
     Console.Write("Введите координаты y2: ");
     double y2 = Convert.ToDouble(Console.ReadLine());
-
-    
     
 }
 
