@@ -26,7 +26,7 @@ try
     double y2 = Convert.ToDouble(Console.ReadLine());
 
     
-    Console.WriteLine(Rast(x1, x2, y1, y2));
+    
 }
 
 catch
