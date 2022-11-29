@@ -2,54 +2,58 @@
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
-// void Dist(int  x1, int  x2, int y1, int y2, int z1, int z2)
-// {
-//     double distance = Math.Sqrt(Math.Pow(x2-x1, 2) + Math.Pow(y2-y1, 2) + Math.Pow(z2-z1, 2));
-//     Console.WriteLine($"Расстояние между точками = {Math.Round(distance, 2)}");
-// }
+int[] coordInput(int times) // Метод для ввода координат! возвращает массив длинной times 
+{
+    int[] array = new int[times];
+    for (int i = 0; i < times; i++)
+    {
+        Console.WriteLine($"Введите {i + 1} координату");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    } //Повторяем times-раз
+    return array;
+}
 
-// try
-// {
-//     Console.Write("Введите координаты x координату точки A: ");
-//     int x1 = Convert.ToInt32(Console.ReadLine());
+double Distance(int[] array_A, int[] array_B)  // Метод для рассчета расстояния! возвращает число, принимает 2 массива 
+{
+    double counter = 0;
+    for (int i = 0; i < array_A.Length; i++)
+    {
+        counter = counter + Math.Pow(array_B[i] - array_A[i], 2);
+    }
+    double dist = Math.Sqrt(counter);
+    return Math.Round(dist, 2);
+}
 
-//     Console.Write("Введите координаты y координату точки A: ");
-//     int y1 = Convert.ToInt32(Console.ReadLine());
+Begin:
+try
+{
+    Console.WriteLine("Введите количество измерений в пространстве: ");
+    int dimentions = Convert.ToInt32(Console.ReadLine());
+    if (dimentions < 0)
+    {
+        dimentions = Math.Abs(dimentions);
+        Console.WriteLine($"Вы ввели отрицательное число! Возможно Вы имели в виду {Math.Abs(dimentions)}?");
+        Console.WriteLine("Но не волнуйтесь! Мы все исправили!");
+    }
+    if (dimentions == 0)
+    {
+        Console.WriteLine("Похоже, вы ввели НОЛЬ, а в 0-D измерении расстояний не существует!!! Попробуйте ещё раз!");
+        Console.WriteLine("----------------------------------------------------------------------------------------");
+        goto Begin; // если НОЛЬ то в начало
+    }
 
-//     Console.Write("Введите координаты z координату точки A: ");
-//     int z1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите координаты точки A:");
+    int[] coordA = coordInput(dimentions);
 
-//     Console.Write("Введите координаты x координату точки B: ");
-//     int x2 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите координаты точки B:");
+    int[] coordB = coordInput(dimentions);
 
-//     Console.Write("Введите координаты y координату точки B: ");
-//     int y2 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine($"Рсстояние между точками A и B = {Distance(coordA, coordB)}");
+}
 
-//     Console.Write("Введите координаты z координату точки B: ");
-//     int z2 = Convert.ToInt32(Console.ReadLine());
-    
-//     Dist(x1, x2, y1, y2, z1, z2);
-// }
-
-// catch
-// {
-//     Console.WriteLine("Проверьте правильность ввода данных");
-// }
-
-// Console.Write("Введите координаты x координату точки A: ");
-// int[] str = Console.ReadLine().Split().Select(int.Parse).ToArray();
-// Console.Write( str);э
-
-Console.Write("Введите количество измерений: ");
-int dim = Convert.ToInt32(Console.ReadLine());
-
-Console.Write("Введите координаты точки A: ");
-int[] a = Console.ReadLine().Split(' ');
-               int a1 = int.Parse(a[0]);
-               int a2 = int.Parse(a[1]);
-               int a3 = int.Parse(a[3]);
-Console.Write($"{b} и {a}");
-
-
-
-
+catch
+{
+    Console.WriteLine("Что-то пошло не так! Проверьте правильность ввода данных!!!");
+    Console.WriteLine("----------------------------------------------------------------------------------------");
+    goto Begin; // В начало, если ошибка!!!
+}
