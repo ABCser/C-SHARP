@@ -1,4 +1,4 @@
-﻿int[] PrintArray(int num)
+﻿int[] FizzBuzz(int num)
 {
     int[] array = new int[num];
     for (int i = 1; i < array.Length; i++)
@@ -10,4 +10,4 @@
     }
     return array;
 }
-PrintArray(101);
+FizzBuzz(101);
