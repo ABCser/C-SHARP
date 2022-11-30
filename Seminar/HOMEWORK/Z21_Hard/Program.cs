@@ -4,7 +4,7 @@
 
 int[] coordInput(int times) // Метод для ввода координат! возвращает массив длинной times 
 {
-    int[] array = new int[times];
+    int[] array = new int[times]; 
     for (int i = 0; i < times; i++)
     {
         Console.WriteLine($"Введите {i + 1} координату");
@@ -29,16 +29,19 @@ try
 {
     Console.WriteLine("Введите количество измерений в пространстве: ");
     int dimentions = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine();
     if (dimentions < 0)
     {
         dimentions = Math.Abs(dimentions);
         Console.WriteLine($"Вы ввели отрицательное число! Возможно Вы имели в виду {Math.Abs(dimentions)}?");
         Console.WriteLine("Но не волнуйтесь! Мы все исправили!");
+        Console.WriteLine();
     }
     if (dimentions == 0)
     {
         Console.WriteLine("Похоже, вы ввели НОЛЬ, а в 0-D измерении расстояний не существует!!! Попробуйте ещё раз!");
         Console.WriteLine("----------------------------------------------------------------------------------------");
+        Console.WriteLine();
         goto Begin; // если НОЛЬ то в начало
     }
 
