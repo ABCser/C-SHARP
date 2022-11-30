@@ -1,6 +1,7 @@
 ﻿// Напишите программу, которая принимает на вход целое число любой разрядности и проверяет, является ли оно палиндромом. Через строку нельзя решать само собой.
 
 
+
 // Вариант решения через модуль bool 
 bool Palinndrom(int num) //Определяем палиндром
 
@@ -24,8 +25,7 @@ try
 {
     Console.Write("Введите любое число! ");
     int n = Convert.ToInt32(Console.ReadLine());
-    bool isPal = Palinndrom(n);
-    if (isPal) Console.WriteLine($"Число {n} является палиндромом!");
+    if (Palinndrom(n)) Console.WriteLine($"Число {n} является палиндромом!");
     else Console.WriteLine($"Число {n} НЕ является палиндромом!");
 }
 
@@ -34,6 +34,10 @@ catch
     Console.WriteLine("Ошибка! Проверьте правильность введенных данных!!!");
     goto Begin;
 }
+
+
+
+
 // int Mirror(int n) // отзеркаливаем число
 // {
 //     int N = Math.Abs(n);
