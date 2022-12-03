@@ -616,7 +616,36 @@ void Z25()
 
 void Z26()
 {
+    // Задача 26. - HARD необязательная Напишите программу, которая принимает на вход целое или дробное число и выдаёт количество цифр в числе.
+    // 452 -> 3
+    // 82 -> 2
+    // 9,012 ->4
 
+    double FullNum(double num)
+    {
+        while (num % 1 != 0) // число делится 10 пока не дойдет до нуля.
+        {
+            num = num * 10;
+        }
+        return num;
+    }
+
+    int Len(int x)
+    {
+        int counter = 1;
+        if (x == 0) counter = 1;
+        while (x / 10 != 0)
+        {
+            x = x / 10;
+            counter++;
+        }
+        return counter;
+    }
+
+    Console.Write("Введите целое : ");
+    double a = Convert.ToDouble(Console.ReadLine());
+    int fullnum = Convert.ToInt32(FullNum(a));
+    Console.WriteLine($"Количество цифр в числе {a} = {Len(fullnum)}");
 }
 
 void Z27()
@@ -680,7 +709,52 @@ void Z29()
 
 void Z30()
 {
+    // Задача 30: - HARD необязательная Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.. 
+    // Далее надо посчитать количество нулей и единиц, если единиц больше чем нулей то вывести TRUE на экран, иначе вывести False.
 
+    // int Ones(int[] a)
+    // {
+    //     int nulls = 0;
+    //     {
+
+    //         for (int n = 0; n < a.Length; n++)
+    //             if (a[n] == 1) nulls++;
+    //     }
+    //     return nulls;
+    // }
+
+    int[] PrintArray()
+    {
+        int[] array = new int[8];
+        for (int i = 0; i < 8; i++)
+        {
+            array[i] = new Random().Next(0, 2);
+            Console.Write($"{array[i]} ");
+        }
+        Console.WriteLine();
+        return array;
+    }
+
+    int Nulls(int[] a)
+    {
+        int nulls = 0;
+        {
+
+            for (int n = 0; n < a.Length; n++)
+                if (a[n] == 0) nulls++;
+        }
+        return nulls;
+    }
+
+    int[] arr = PrintArray();
+
+    bool ZeroOnes()
+    {
+        if (Nulls(arr) >= 4) return false;
+        else return true;
+    }
+
+    Console.WriteLine(ZeroOnes());
 }
 
 
