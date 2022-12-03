@@ -650,7 +650,7 @@ void Z27()
         return sum;
     }
 
-    Console.Write("Введите целое : ");
+    Console.Write("Введите целое число: ");
     int a = Convert.ToInt32(Console.ReadLine());
     int length = Len(a);
     Console.WriteLine($"Сумма цифр в числе {a} = {Sum(a, length)}");
