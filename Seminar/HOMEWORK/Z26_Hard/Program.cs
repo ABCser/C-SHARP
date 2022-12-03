@@ -24,7 +24,7 @@ int Len(int x)
     return counter;
 }
 
-Console.Write("Введите целое : ");
+Console.Write("Введите любое число: ");
 double a = Convert.ToDouble(Console.ReadLine());
 int fullnum = Convert.ToInt32(FullNum(a));
 Console.WriteLine($"Количество цифр в числе {a} = {Len(fullnum)}");
