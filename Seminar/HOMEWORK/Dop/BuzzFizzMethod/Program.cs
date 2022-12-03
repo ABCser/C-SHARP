@@ -64,24 +64,37 @@
 // }
 // // Console.WriteLine(result);
 
-void Fizz(int[] num)
-{
-    if (num[j] % 3 == 0) Console.Write("Fizz ");
-}
 // void Buzz(int num)
 // {
 //    if (num%5==0) Console.WriteLine("Buzz");
 
 // }
 
-int[] PrintArray()
-{
-    int[] array = new int[101];
-    for (int i = 1; i < array.Length; i++)
+// int[] PrintArray()
+// {
+//     int[] array = new int[101];
+//     for (int i = 1; i < array.Length; i++)
+//     {
+//         Console.Write($"{i} ");
+//     }
+//     return array;
+// }
 
-    {
-        Console.Write($"{i} ");
-    }
-    return array;
-}
-PrintArray();
+// void Fizz(int[] num)
+// {
+//     int[] F = num;
+//     for (int j = 0; j < num.Length; j++)
+//     {
+//         if (num[j] % 3 == 0) Console.Write("Fizz");
+//         else Console.WriteLine(num[j]);
+//     }
+// }
+
+// void Buzz(int[] num)
+// {
+//     for (int i = 0; i < num.Length; i++)
+//         if (num[i] % 5 == 0) Console.WriteLine("Buzz");
+// }
+
+// int[] arr = PrintArray();
+// Fizz(arr);
