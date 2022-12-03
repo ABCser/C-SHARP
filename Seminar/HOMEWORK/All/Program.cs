@@ -57,7 +57,7 @@ void Menu(int num)
             break;
 
         case 26:
-            Z21();
+            Z26();
             break;
 
         case 27:
