@@ -67,12 +67,15 @@ int size = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 int[] arr = CreateArray(size);
 
+Console.Write("Массив случайных уникальных чисел: ");
 PrintArray(arr);
 Console.WriteLine();
 
+Console.Write("Сортировка массива по убыванию:    ");
 SortArray(arr);
 PrintArray(arr);
 Console.WriteLine();
 
+Console.Write("Перемешивание элементов массива:   ");
 MixArray(arr);
 PrintArray(arr);
