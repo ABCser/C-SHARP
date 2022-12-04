@@ -5,7 +5,7 @@
 
 double FullNum(double num)
 {
-    while (num % 1 != 0) // число делится 10 пока не дойдет до нуля.
+    while (num % 1 != 0) 
     {
         num = num * 10;
     }
