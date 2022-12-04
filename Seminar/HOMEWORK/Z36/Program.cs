@@ -15,7 +15,6 @@ int[] FillPrintArray(int num)
     }
 }
 
-
 int Elements(int[] array)
 {
     int count = 0;
@@ -31,4 +30,4 @@ int length = Convert.ToInt32(Console.ReadLine());
 int[] arr = FillPrintArray(length);
 
 Console.WriteLine();
-Console.WriteLine($"{Elements(arr)}");
+Console.WriteLine($"Сумма элементов стоящих на нечетных позициях = {Elements(arr)}.");
