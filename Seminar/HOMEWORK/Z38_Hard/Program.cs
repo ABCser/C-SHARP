@@ -103,15 +103,14 @@ double Median(int[] array)
 Console.WriteLine("Введите размер массива  ");
 int size = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
-int[] array = FillPrintArray(size);
-double med = Median(array);
-Console.WriteLine();
 
+int[] array = FillPrintArray(size);
 int max = Max(array);
 int maxind = MaxInd(array, max);
 int min = Min(array);
 int minind = MinInd(array, min);
 double sred = SrAr(array);
+double med = Median(array);
 
 Console.WriteLine();
 NewArray(max, min, maxind, minind, sred);
@@ -122,5 +121,3 @@ Console.WriteLine($"Среднее арифметическое всех эле�
 Console.WriteLine();
 Console.WriteLine($"Медианное значение первоначалального массива = {med}");
 Console.WriteLine();
-
-
