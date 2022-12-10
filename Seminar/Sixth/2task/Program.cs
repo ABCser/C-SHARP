@@ -16,3 +16,4 @@ int c = Convert.ToInt32(Console.ReadLine());
 
 if (a < b + c && b < a + c && c < b + a) Console.WriteLine("Такой треугольник может существовать!");
 else Console.WriteLine("Такой треугольник существовать не может!");
+
