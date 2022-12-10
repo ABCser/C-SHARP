@@ -98,18 +98,7 @@
 
 // // int[] arr = PrintArray();
 // // Fizz(arr);
-// int[] CreateArray()
-// {
-//     int[] array = new int[100];
-//     for (int i = 0; i <= array.Length - 1; i++) array[i] = i;
-//     return array;
-// }
 
-// void PrintArray(int[] array)
-// {
-//     for (int i = 1; i <= array.Length; i++) Console.Write($"{i} ");
-//     Console.WriteLine();
-// }
 
 // void Fi ()
 // {
@@ -138,6 +127,18 @@
 // }
 
 
-// int[] arr = CreateArray();
-// Fizz(arr);
-// Buzz(arr);
+int[] CreateArray()
+{
+    int[] array = new int[100];
+    for (int i = 0; i < array.Length; i++) array[i] = i;
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 1; i <= array.Length; i++) Console.Write($"{i} ");
+    Console.WriteLine();
+}
+
+int[] arr = CreateArray();
+PrintArray(arr);
