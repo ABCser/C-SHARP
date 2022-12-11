@@ -58,10 +58,10 @@ PrintArray(array);
 Console.Write($"Min = {Min(array)} ");
 Console.Write($"Max = {Max(array)}");
 
-int temp = 0;
-int count = 1;
-bool flag;
-int min = Min(array);
+// int temp = 0;
+// int count = 1;
+// bool flag;
+// int min = Min(array);
 
 // while (flag)
 // {
