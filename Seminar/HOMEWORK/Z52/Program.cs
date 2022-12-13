@@ -5,7 +5,7 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-void Printmatray(int[,] matr)
+void PrintMatr(int[,] matr)
 {
 
     for (int i = 0; i < matr.GetLength(0); i++)
@@ -18,7 +18,7 @@ void Printmatray(int[,] matr)
     }
 }
 
-void Fillmatray(int[,] matr)
+void FillMatr(int[,] matr)
 {
 
     for (int i = 0; i < matr.GetLength(0); i++)
@@ -52,9 +52,9 @@ int y = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix = new int[x, y];
 
-Fillmatray(matrix);
-Printmatray(matrix);
+FillMatr(matrix);
+PrintMatr(matrix);
 
 Console.WriteLine();
 Console.WriteLine("Среднее арифметическое каждого столбца: ");
-sumAr(matrix);
+SredAr(matrix);

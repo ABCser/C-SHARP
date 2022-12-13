@@ -53,15 +53,12 @@ void FindNum(int[,] matr, int num)
 
 Console.Write("Введите количество строк: ");
 int x = Convert.ToInt32(Console.ReadLine());
-
 Console.Write("Введите количество солбцов: ");
 int y = Convert.ToInt32(Console.ReadLine());
-
 Console.Write("Введите искомое число: ");
 int z = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix = new int[x, y];
-
 FillArray(matrix);
 PrintArray(matrix);
 FindNum(matrix, z);

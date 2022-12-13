@@ -38,15 +38,7 @@ int Min(int[] array)
     return min;
 }
 
-int Max(int[] array)
-{
-    int max = array[0];
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] > max) max = array[i];
-    }
-    return max;
-}
+
 
 Console.Write("Введите размер массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
@@ -55,21 +47,30 @@ CreateArray(n);
 int[] array = CreateArray(n);
 PrintArray(array);
 
-Console.Write($"Min = {Min(array)} ");
-Console.Write($"Max = {Max(array)}");
+int min = Min(array);
+Console.WriteLine($"Min = {Min(array)} ");
 
-// int temp = 0;
-// int count = 1;
-// bool flag;
-// int min = Min(array);
+int times = 0;
+int count = 0;
 
-// while (flag)
-// {
-//     temp++;
-//     foreach (int el in array)
-//     {
-//         if (min = el) temp++;
 
-//         else flag = false;
-//     }
-// }
+
+while (times < n*n)
+{
+    foreach (int el in array)
+    {
+        if (el != min + count)
+        {
+            times++;
+        }
+       else if (el == min + count)
+        {
+            count++;
+            // Console.WriteLine(count);
+        }
+    }
+}
+Console.WriteLine(count);
+
+
+// [1, 5, 2, 3, 4, 6, 1, 7] => [1, 7]

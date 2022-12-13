@@ -44,29 +44,20 @@ void FillArray(int[,] matr)
     }
 }
 
-// void SortArray(int[,] matr)
-// {
-//             int[] row = new int[colCount];
-//             for (int i = 0; i < rowCount; i++)
-//             {
-//                 for (int j = 0; j < colCount; j++)
-//                     row[j] = arr[i, j];
-//                 BubbleSort(row);
-//                 Insert(true, i, row, arr);
-//             }
-//             PrintArray(arr);
-//             Console.WriteLine("Сортировка по столбцам: ");
-//             int[] col = new int[rowCount];
-//             for (int i = 0; i < colCount; i++)
-//             {
-//                 for (int j = 0; j < rowCount; j++)
-//                     col[j] = arr[j, i];
-//                 BubbleSort(col);
-//                 Insert(false, i, col, arr);
-//             }
-//             PrintArray(arr);
-//         }
-// }
+void SortArray(int[,] array)
+{
+ { 
+     for (int i = 0; i < array.GetLength(0); i++) 
+         for (int j = 0; j < array.GetLength(1); j++) 
+             for (int k = 0; k < array.GetLength(0); k++) 
+                 for (int z = 0; z < array.GetLength(1); z++) 
+                     if (array[k, z] > array[i, j]) 
+                         (array[k, z], array[i, j]) = (array[i, j], array[k, z]); 
+ }
+}
 
 FillArray(matrix);
+PrintArray(matrix);
+Console.WriteLine();
+SortArray(matrix);
 PrintArray(matrix);
